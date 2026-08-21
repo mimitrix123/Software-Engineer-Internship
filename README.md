@@ -1,6 +1,13 @@
 # Software-Engineer-Internship
 Software Engineering Assignments And Mini Project
 
+## Major Projects
+
+### Week 4 — Production SaaS Platform
+A full-stack SaaS reference application covering authentication, REST API, database, real-time WebSockets, Docker, GitHub Actions CI/CD, Prometheus/Grafana monitoring, OpenAPI documentation, cloud deployment configuration, automated tests, and the complete software engineering lifecycle.
+
+See [`week-4/saas-platform/README.md`](week-4/saas-platform/README.md) and [`week-4/saas-platform/ARCHITECTURE.md`](week-4/saas-platform/ARCHITECTURE.md).
+
 ## Mini Projects
 
 ### Week 2 — Library Management System
