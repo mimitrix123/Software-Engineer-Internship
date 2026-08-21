@@ -1,0 +1,25 @@
+name: Week 4 SaaS CI/CD
+
+on:
+  push:
+    paths: ['week-4/saas-platform/**', '.github/workflows/week4-ci.yml']
+  pull_request:
+    paths: ['week-4/saas-platform/**', '.github/workflows/week4-ci.yml']
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: week-4/saas-platform/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - run: python -m compileall app
+      - name: Build Docker image
+        working-directory: week-4/saas-platform
+        run: docker build -t week4-saas-api .
